@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import logo from '../header/logo3-0-removebg-preview.png'
 import './index.css'
 const Navbar = () => {
-    const [showMenu, setShowMenu] = useState(false)
+    const [showMenu, setShowMenu] = useState(false) 
 
     const menuToggle = () => {
     setShowMenu(!showMenu)
@@ -27,7 +26,7 @@ const Navbar = () => {
 
           </ul>
 
-          <img src={logo} alt="logo" className='logo'/>
+          <img src={"/images/logo3-0-removebg-preview.png"} alt="logo" className='logo'/>
 
           <button>Make a reservation</button>
     </nav>

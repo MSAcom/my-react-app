@@ -1,21 +1,15 @@
 import './index.css';
 import React, { useState, useEffect } from 'react';
-import logo from './logo3-0-removebg-preview.png'
-import burger from './burger-sans-fond.png';
-import croix from './croix-épurée.png';
-import banner from "../../images/image-accueil.jpg"
 import Navbar from '../navbar';
 function Header () {
     
-   
-
     return (
         
         <header className='header'>
             
           <Navbar/>
             <div className='hero_container'>
-        <img src={banner} alt='banner intérieur restaurant' className='hero_banner' />
+        <img src={'/images/image-accueil.jpg'} alt='banner intérieur restaurant' className='hero_banner' />
             </div>
         </header>
     )  
