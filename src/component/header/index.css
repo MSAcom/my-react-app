@@ -1,0 +1,14 @@
+header{
+    height: 100vh;
+}
+.hero_container{
+   
+height: 100%;
+width: 100%;
+}
+
+.hero_container img{
+object-fit: cover;
+height: 100%;
+width: 100%;
+}
