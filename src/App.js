@@ -1,17 +1,24 @@
 import Header from "./component/header";
 import Section from "./component/section";
+import Menu from "./images/menu.png";
+import Slider from "./component/slider";
+import Jerome from "./images/jerome.jpg";
+import Caroussel from "./component/caroussel";
+
 //accolades pour avoir accès à une partie du fichier 
 //sans pour tout prendre 
 
-const content = {h2: "Menu", p : "lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores lorem ipsum dolores" }
+const content1 = {h2: "Menu", p : "À l'affiche, des ingrédients premium, sain et fraichement cueillis afin de raviver vos papilles au travers de mélange harmonieux et savoureux. Venez découvrir le menu de Jerome Billings. Une expérience culinaire à ne surtout pas rater car vous ne le regreteriez pas." }
+const content2 = {h2: "Jerome Billings", p : "Jerome Billings dirige l'équipe de Qyru et s'adonne tout particuliairement à la cuisine moléculaire depuis très longtemps. Sa maitrise des éléments et des réactions chimiques lui permet de vous amenez vers un univers culinaire des plus particuliers." }
 function App() {
+  
   return (
     <div className="App">
-      <Header/>
- <main>
-        <Section content={content} image={'/images/menu.png'} background={"#D5DDDB"} isReverseColumn={false} />
-        <Section content={content} image={'/images/helene.png'} background={"#EEEEEE"} isReverseColumn={false} isReverseRow={true} />
-        
+      <Header />
+      <main>
+        <Section content={content1} image={Menu} background={"#edd8996d"} isReverseColumn={true} />
+        <Section content={content2} image={Jerome} background={"#b9caa98d"} isReverseColumn={true} isReverseRow={true} />
+        <Caroussel/>
       </main>
       
   

@@ -2,13 +2,47 @@ header{
     height: 100vh;
 }
 .hero_container{
-   
+   display: flex;
+   justify-content: center;
+   align-items: center;
 height: 100%;
 width: 100%;
+background-image:url("/src/images/image-accueil.jpg");
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-position: center center;
+animation: zoomIn 25s cubic-bezier(0.39, 0.575, 0.565, 1)  infinite;
 }
 
+@keyframes zoomIn{
+    0%{
+       background-size: 100% 100%;
+    }
+    50%{
+ background-size: 120% 120%;
+    }
+    
+    100%{
+     background-size: 100% 100%;
+    }
+}
 .hero_container img{
-object-fit: cover;
-height: 100%;
-width: 100%;
+    filter: invert(1);
+height: 25vh;
+width: 45vw;
+
+
+}
+ .hero_banner_responsive {
+    display: none;
+ }
+@media screen and (max-width:827px) {
+    .hero_container .hero_banner{
+        display: none;
+    }
+    .hero_container .hero_banner_responsive {
+        display: flex; 
+        height: 55vw;
+        width: 75vw;
+    }
 }

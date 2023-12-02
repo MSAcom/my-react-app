@@ -1,14 +1,22 @@
 nav{
-   position: absolute;
+   position: fixed;
+   z-index: 15;
    top: 0;
    left: 0;
    width: 100%;
-   display: flex;
+   display: flex; 
    justify-content: space-between;
    align-items: center;
    height: 65px;
    padding: 0 15px;
+   background-color: rgba(0, 0, 0, 0.458);
 }
+nav .logo{
+    position: absolute;
+    left: 45%;
+    top:5px;
+}
+
 .toggleBtn{
 display: flex;
 flex-direction: column;
@@ -16,7 +24,8 @@ justify-content: space-around;
 align-items: center;
 height: 40px;
 width: 25px;
-margin: 0 5px;
+margin: 20px;
+
 }
 .toggleBtn:hover .line{
   transform: scaleX(.8);
@@ -38,8 +47,37 @@ margin: 0 5px;
     transition-delay: 0s;
     transition-property: all;
 }
+
 .toggleBtn.black .line{
-    background-color: black
+    background-color: black;
+      transition:.3s cubic-bezier(.8, .5, .2, 1.4);
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    transition-delay: 0s;
+    transition-property: all;
+    transform: rotate(45deg) translate(-5px, -10px);
+    
+}
+.toggleBtn.black .line:nth-child(1){
+    background-color: black;
+    transform: rotate(-45deg) translate(-5px, 10px);
+}
+.toggleBtn.black:hover {
+    transition:.3s cubic-bezier(.8, .5, .2, 1.4);
+    transition-behavior: normal;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    transition-delay: 0s;
+    transition-property: all;
+    transform: scale(0.8);
+}
+.toggleBtn.black:hover .line{
+    transform: rotate(45deg) translate(-5px, -10px) ;
+  }
+.toggleBtn.black:hover .line:nth-child(1){
+    background-color: black;
+    transform: rotate(-45deg) translate(-5px, 10px);
 }
 .menu{
     padding: 15px;
@@ -61,3 +99,49 @@ margin: 0 5px;
     height: 100%;
     filter: invert(1);
 }
+button{
+    background-color: transparent;
+    padding: 5px 15px 5px 15px ;
+    font-size: 18px;
+    color:white;
+    border-color: white;
+    transition: .5s ease;
+    margin:10px;
+
+}
+button:hover{
+    background-color: white;
+    color: black;
+    transition: .5s ease;
+    border:white;
+}
+
+.menu_link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: aqua; */
+    align-items: center;
+    height: 700px;
+    /* justify-content: cent; */
+}
+.link{
+    /* background-color: red; */
+    display: flex;
+    height: 50px;
+    font-size:xx-large;
+    
+    
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+
+    /* background-color: bisque; */
+}
+
+img.logo{
+ 
+}
+

@@ -21,6 +21,7 @@ const Section = ({ content, image, background, isReverseColumn , isReverseRow}) 
               <div className="container">
               <h2>{ content.h2}</h2>
               <p>{ content.p}</p>
+              <button className='readmore'>Read More</button>
               </div>
           </div>
           <div className="rigth_section">
