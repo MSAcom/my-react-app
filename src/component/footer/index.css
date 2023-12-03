@@ -10,7 +10,7 @@
 .sci svg {
     margin:  3px;
 }
-.update {
+.update { /*aligner span aux icons*/
     display: flex;
     justify-content: center;
     align-items: center;

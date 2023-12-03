@@ -17,47 +17,53 @@ nav .logo{
     top:5px;
 }
 
+
 .toggleBtn{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-height: 40px;
-width: 25px;
-margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 25px;
+    margin: 20px;
 
 }
-.toggleBtn:hover .line{
+.toggleBtn:hover .line{ 
   transform: scaleX(.8);
 }
-.toggleBtn:hover .line:nth-child(2) {
+.toggleBtn:hover .line:nth-child(2) { /* enfant n*2 seulement*/
   transform: scaleX(.5);
 }
-
 .toggleBtn .line{
     width: 50px;
     margin: 0 1px 0 1px;
     color: white;
     height: 2px;
     background-color: white;
-    transition:.3s cubic-bezier(.8, .5, .2, 1.4);
-    transition-behavior: normal;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.4);
-    transition-delay: 0s;
-    transition-property: all;
+    transition-duration: 0.3s; /*smooth*/
 }
 
+
+.menu{
+    padding: 15px;
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    width: 400px;
+    transform: translateX(-100%); /*décale sur la gauche de base*/
+    list-style: none;
+    transition: 0.5s;
+}
+.menu.active{ /*quand appuie sur burger, reviens vers la droite*/
+    transform: translateX(0%);
+    z-index:900;
+}
 .toggleBtn.black .line{
     background-color: black;
-      transition:.3s cubic-bezier(.8, .5, .2, 1.4);
-    transition-behavior: normal;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.4);
-    transition-delay: 0s;
-    transition-property: all;
+    transition:.3s cubic-bezier(.8, .5, .2, 1.4); /*smooth 2e manière*/
     transform: rotate(45deg) translate(-5px, -10px);
-    
 }
 .toggleBtn.black .line:nth-child(1){
     background-color: black;
@@ -65,11 +71,6 @@ margin: 20px;
 }
 .toggleBtn.black:hover {
     transition:.3s cubic-bezier(.8, .5, .2, 1.4);
-    transition-behavior: normal;
-    transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(0.8, 0.5, 0.2, 1.4);
-    transition-delay: 0s;
-    transition-property: all;
     transform: scale(0.8);
 }
 .toggleBtn.black:hover .line{
@@ -79,28 +80,37 @@ margin: 20px;
     background-color: black;
     transform: rotate(-45deg) translate(-5px, 10px);
 }
-.menu{
-    padding: 15px;
-    position: absolute;
-    background-color: white;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    width: 400px;
-    transform: translateX(-100%);
-    list-style: none;
-    transition: 0.5s;
+
+
+.menu_link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    height: 500px;
 }
-.menu.active{
-    transform: translateX(0%);
-    z-index:900;
+.link{
+    display: flex;
+    height: 50px;
+    font-size:xx-large;
 }
+a{ /*texte dans burger*/
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
 
 .logo{
     height: 100%;
     filter: invert(1);
 }
-button.reservationBtn{
+img.logo{ /*quand burger alors va en dessous*/
+    z-index:899;
+}
+
+
+button.reservationBtn{ /*important classe à bouton car sinon tailwind écrase et met style par défaut*/
     background-color: transparent;
     padding: 5px 15px 5px 15px ;
     font-size: 18px;
@@ -108,7 +118,6 @@ button.reservationBtn{
     border: solid 1px white;
     transition: .5s ease;
     margin:10px;
-
 }
 button.reservationBtn:hover{
     background-color: white;
@@ -116,41 +125,9 @@ button.reservationBtn:hover{
     transition: .5s ease;
     border:solid 1px white;
 }
-
-.menu_link{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* background-color: aqua; */
-
-    align-items: left;
-    height: 500px;
-    /* justify-content: cent; */
-}
-.link{
-    /* background-color: red; */
-    display: flex;
-    height: 50px;
-    font-size:xx-large;
-    
-    
-}
-a{
-    text-decoration: none;
-    color:black;
-    font-weight: bold;
-
-    /* background-color: bisque; */
-}
-
-img.logo{
-    z-index:899;
-}
-
 @media  screen and (max-width:500px) {
     button.reservationBtn{
         display: none;
     }
-    
 }
 

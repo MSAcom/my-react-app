@@ -1,7 +1,6 @@
 import Header from "./component/header";
 import Section from "./component/section";
 import Menu from "./images/menu.png";
-import Slider from "./component/slider";
 import Jerome from "./images/jerome.jpg";
 import Caroussel from "./component/caroussel";
 import Footer from "./component/footer";
