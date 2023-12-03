@@ -24,12 +24,12 @@ const Navbar = () => {
         </div>
           
         <div className="menu_link">
-          <li className='link'> <a href="">Home</a></li>
-          <li className='link'><a href="">About</a></li>
-          <li className='link'><a href="">Menu</a></li>
-          <li className='link'><a href="">Réservations</a></li> 
-          <li className='link'><a href="">Events</a></li>
-          <li className='link'><a href="">Contact</a></li>  
+          <li className='link'> <a href={'/'}>Home</a></li>
+          <li className='link'><a href={'/about'}>About</a></li>
+          <li className='link'><a href={'/menu'}>Menu</a></li>
+          <li className='link'><a href={'/reservation'}>Réservations</a></li> 
+          <li className='link'><a href={'/events'}>Events</a></li>
+          <li className='link'><a href={'/contact'}>Contact</a></li>  
         </div>
       </ul>
 

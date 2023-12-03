@@ -13,7 +13,7 @@ const Caroussel = () => {
         interval = setInterval(() => {
             handleTab(++currentIndex % 3)
         }, 5000);
-            
+
             return () => {clearInterval(interval) };
         },
         [])
