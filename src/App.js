@@ -4,6 +4,8 @@ import Menu from "./images/menu.png";
 import Slider from "./component/slider";
 import Jerome from "./images/jerome.jpg";
 import Caroussel from "./component/caroussel";
+import Footer from "./component/footer";
+
 
 //accolades pour avoir accès à une partie du fichier 
 //sans pour tout prendre 
@@ -20,10 +22,12 @@ function App() {
         <Section content={content2} image={Jerome} background={"#b9caa98d"} isReverseColumn={true} isReverseRow={true} />
         <Caroussel/>
       </main>
+      <Footer/>
       
   
       
       <script src="https://kit.fontawesome.com/11dfd8b97e.js" crossorigin="anonymous"></script>
+    
     </div>
   )
 }

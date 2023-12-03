@@ -27,6 +27,7 @@ const Navbar = () => {
               <li className='link'> <a href="">Home</a></li>
               <li className='link'><a href="">About</a></li>
               <li className='link'><a href="">Menu</a></li>
+              <li className='link'><a href="">Réservations</a></li> 
               <li className='link'><a href="">Events</a></li>
               <li className='link'><a href="">Contact</a></li>  
 
@@ -34,7 +35,7 @@ const Navbar = () => {
           </ul>
           <img src={Logo} alt="logo" className='logo'/>
 
-          <button>Make a reservation</button>
+          <button className='reservationBtn'>réservation</button>
     </nav>
   )
 }

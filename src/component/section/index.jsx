@@ -19,8 +19,8 @@ const Section = ({ content, image, background, isReverseColumn , isReverseRow}) 
           
           <div className="left_section" >
               <div className="container">
-              <h2>{ content.h2}</h2>
-              <p>{ content.p}</p>
+              <h2 className={"left_section_head font-bold text-76"}>{content.h2}</h2>
+              <p className='left_section_p'>{ content.p}</p>
               <button className='readmore'>Read More</button>
               </div>
           </div>

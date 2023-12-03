@@ -93,36 +93,38 @@ margin: 20px;
 }
 .menu.active{
     transform: translateX(0%);
+    z-index:900;
 }
 
 .logo{
     height: 100%;
     filter: invert(1);
 }
-button{
+button.reservationBtn{
     background-color: transparent;
     padding: 5px 15px 5px 15px ;
     font-size: 18px;
     color:white;
-    border-color: white;
+    border: solid 1px white;
     transition: .5s ease;
     margin:10px;
 
 }
-button:hover{
+button.reservationBtn:hover{
     background-color: white;
     color: black;
     transition: .5s ease;
-    border:white;
+    border:solid 1px white;
 }
 
 .menu_link{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     /* background-color: aqua; */
-    align-items: center;
-    height: 700px;
+
+    align-items: left;
+    height: 500px;
     /* justify-content: cent; */
 }
 .link{
@@ -142,6 +144,13 @@ a{
 }
 
 img.logo{
- 
+    z-index:899;
+}
+
+@media  screen and (max-width:500px) {
+    button.reservationBtn{
+        display: none;
+    }
+    
 }
 

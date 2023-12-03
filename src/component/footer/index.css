@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sci {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.sci svg {
+    margin:  3px;
+}
+.update {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
